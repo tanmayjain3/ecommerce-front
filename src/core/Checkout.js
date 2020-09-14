@@ -32,7 +32,7 @@ const Checkout = ({products}) =>{
     }
 
     const buy = () =>{
-        setFrontendData({loading:true});
+        setFrontendData({...frontendData, loading:true});
         let nonce;
         let getNonce = frontendData.instance.requestPaymentMethod()
             .then(data=>{
@@ -51,11 +51,16 @@ const Checkout = ({products}) =>{
                         address:data.address
                     };
                     createOrder(userId,token,createOrderData)
-                    setFrontendData({...frontendData,success:response.success});
-                    emptyCart(()=>{
-                        console.log("empty cart");
-                        setFrontendData({loading:false});
-
+                    .then(response=>{
+                        setFrontendData({...frontendData,success:response.success});
+                        emptyCart(()=>{
+                            console.log("empty cart");
+                            setFrontendData({
+                                loading:false,
+                                success:true
+                            });
+    
+                        })
                     })
                 })
                 .catch(error=>{
