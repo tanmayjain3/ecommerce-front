@@ -33,6 +33,12 @@
                     }
                 ]
             }
+        ],
+        [
+            "@semantic-release/exec",
+            {
+                "prepareCmd": "./prepare-release.sh ${nextRelease.version}"
+            }
         ]
     ]
 }
