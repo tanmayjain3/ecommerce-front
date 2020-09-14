@@ -137,7 +137,7 @@ const AddProduct = () =>{
 
         const goBack =() =>(
             <div className="mt-5">
-                <Link to="/admin/dashboard" className="text-warning">Back to Dashboard</Link>
+                <Link to="/admin/dashboard" className="text">Back to Dashboard</Link>
             </div>
         )
         return (
