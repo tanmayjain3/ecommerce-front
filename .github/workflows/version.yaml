@@ -15,6 +15,6 @@ jobs:
         uses: "kaangokdemir/github-version-bumper@master"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_NAME: "tanmayjain3"
-          GITHUB_EMAIL: "tanmayjain53@gmail.com"
+          GITHUB_NAME: ""
+          GITHUB_EMAIL: ""
           VERSION_FILE_NAME: "package.json"
