@@ -1,6 +1,6 @@
 {
     "name": "ecommerce-front",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "private": true,
     "dependencies": {
         "braintree-web-drop-in-react": "^1.1.0",
